@@ -31,12 +31,10 @@
             login: function() {
                 axios.post(Config.api_url+'api/user/login', this.user).then(response=>{
                     if(response.data.success) {
-                        this.$store.dispatch('setUser', response.data.user);
-                        this.$store.dispatch('setToken', response.data.token);
                         localStorage.setItem('token', response.data.token);
                         this.$toast.success('Login efetuado com sucesso');
                         setTimeout(()=>{
-                            this.$router.push('Dashboard');
+                            this.$router.go();
                         }, 2000);
                     } else if (response.data.error && response.data.message)
                           this.$toast.error(response.data.message);
