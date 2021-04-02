@@ -1,4 +1,4 @@
-# goup
+# Goup front
 
 ## Instalando dependencias
 ```
