@@ -2,6 +2,9 @@
 
 ## Instalando dependencias
 ```
+cd goup-front
+```
+```
 npm install
 ```
 
